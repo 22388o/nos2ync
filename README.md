@@ -16,7 +16,25 @@ cargo install nos2ync
 
 Usage:
 ```
-nos2ync ./nos2ync_config.toml
+nos2ync ./nos2ync_config.ron
+```
+
+## Config
+
+Config.ron is a file that contains information that nos2ync needs to do it job.
+
+The file is in `ron (rust object notation)`.
+
+Example config:
+
+```ron
+Config(
+    nostr_private_key: "value",
+    last_n_tweets: 10,
+    twitter_username: "value",
+    consumer_key: "value",
+    consumer_secret: "value",
+)
 ```
 
 ## Contribution
