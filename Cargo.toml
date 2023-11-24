@@ -1,0 +1,13 @@
+[package]
+name = "nos2ync"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nostr-bot = "*"
+egg-mode = "0.16"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0.104", features = ["derive"] }
+toml = "0.5.8"
