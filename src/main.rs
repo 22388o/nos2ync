@@ -7,7 +7,7 @@ async fn main() {
     let args: Vec<String> = env::args().collect();
     let path = args[0].clone();
     let config = load_config_from_file(&path);
-    
+
     println!("private key: {}", config.nostr_private_key);
     println!("last n tweets: {}", config.last_n_tweets);
     println!("twitter username: {}", config.twitter_username);
