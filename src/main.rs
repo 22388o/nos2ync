@@ -24,8 +24,7 @@ struct Config {
 }
 
 fn load_config_from_file(path: &str) -> Config {
-    let contents = std::fs::read_to_string(path)
-        .expect("Should have been able to read the file");
+    let contents = std::fs::read_to_string(path).expect("Should have been able to read the file");
 
     let config: Config = ron::from_str(&contents).unwrap();
     config
