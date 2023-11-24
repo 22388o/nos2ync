@@ -1,11 +1,10 @@
 use serde::Deserialize;
 use std::env;
-use toml::from_str;
 
 #[tokio::main]
 async fn main() {
     let args: Vec<String> = env::args().collect();
-    let path = args[0].clone();
+    let path = args[1].clone();
     let config = load_config_from_file(&path);
 
     println!("private key: {}", config.nostr_private_key);
@@ -25,6 +24,9 @@ struct Config {
 }
 
 fn load_config_from_file(path: &str) -> Config {
-    let contents = std::fs::read_to_string(path).unwrap();
-    from_str(&contents).unwrap()
+    let contents = std::fs::read_to_string(path)
+        .expect("Should have been able to read the file");
+
+    let config: Config = ron::from_str(&contents).unwrap();
+    config
 }

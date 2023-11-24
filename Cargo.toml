@@ -9,5 +9,5 @@ edition = "2021"
 nostr-bot = "*"
 egg-mode = "0.16"
 tokio = { version = "1", features = ["full"] }
-serde = { version = "1.0.104", features = ["derive"] }
-toml = "0.5.8"
+ron = "0.8"
+serde = { version = "1", features = ["derive"] }

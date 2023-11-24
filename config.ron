@@ -1,0 +1,7 @@
+Config(
+    nostr_private_key: "value",
+    last_n_tweets: 10,
+    twitter_username: "value",
+    consumer_key: "value",
+    consumer_secret: "value",
+)
